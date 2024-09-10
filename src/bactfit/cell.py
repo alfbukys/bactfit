@@ -728,13 +728,13 @@ class CellList(object):
 
         if locs is None:
             print(f"Added 0 localisations to CellList")
-
-        if len(locs) > 0:
-            n_locs = len(locs)
         else:
-            n_locs = 0
+            if len(locs) > 0:
+                n_locs = len(locs)
+            else:
+                n_locs = 0
 
-        print(f"Added {n_locs} localisations to CellList")
+            print(f"Added {n_locs} localisations to CellList")
 
     @staticmethod
     def compute_transforms(jobs, compute_list):
