@@ -1259,6 +1259,8 @@ class CellList(object):
             print(traceback.format_exc())
             pass
 
+    def __getitem__(self, cell_index):
+        return self.data[cell_index]
 
 
 
