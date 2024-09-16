@@ -84,7 +84,7 @@ def check_edge(bbox, mask_shape,
 
     return edge
 
-def mask_to_cells(masks, images=None, locs=None, buffer = 1, flipxy = False, verbose = True):
+def mask_to_cells(masks, images=None, locs=None, buffer = 1, flipxy = False, verbose = True, pixel_size=None):
 
     mask_list = None
 
@@ -153,7 +153,8 @@ def mask_to_cells(masks, images=None, locs=None, buffer = 1, flipxy = False, ver
                         "height": h,
                         "width": w,
                         "vertical": vertical,
-                        "frame_index": frame_index
+                        "frame_index": frame_index,
+                        "pixel_size": pixel_size
                     }
 
                     cell = Cell(cell_data)
