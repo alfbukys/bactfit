@@ -235,7 +235,7 @@ class Cell(object):
         for point_index in possible_points:
             point = points[point_index]
 
-            if self.cell_polygon.contains(point):
+            if self.cell_polygon.intersects(point):
                 polygon_point_indices.append(point_index)
 
         if len(polygon_point_indices) > 0:
